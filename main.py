@@ -162,3 +162,6 @@ for chunk in supervisor.stream(
     pretty_print_messages(chunk, last_message=True)
 
 final_message_history = chunk["supervisor"]["messages"]
+
+for message in final_message_history:
+    message.pretty_print()
